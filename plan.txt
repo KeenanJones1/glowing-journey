@@ -60,3 +60,20 @@ country events
 --provinces rebels
 
 
+type of Event Decks 
+ --Country
+ --Personality
+ --Base Deck
+
+--Task 
+-User can create a Ruler 
+-User can select a personality type 
+-Country is generated
+-List factors to generate a country 
+-Create an event 
+-Generate Deck of Events
+-Subclass of Events
+
+Certain Choices add Events to Event Deck. 
+
+

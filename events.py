@@ -9,5 +9,7 @@ class Event:
 
     # addition to base deck of events
 
+    # Have Mulitple choice answers that has Effects.
+
     def __init__(self) -> None:
         "Hello world"
