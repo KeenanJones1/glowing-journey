@@ -44,4 +44,8 @@ end
   self.personality = choosen_personality[0]
  end
 
+
+ def select_intro_event()
+ end 
+
 end

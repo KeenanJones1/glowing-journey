@@ -86,3 +86,13 @@ culture of Countries
 
 validate event, 
 regex -> +/- followed by digit followed by effect 
+
+
+work on connections
+ruler has_one country 
+country has_many events 
+country belongs_to ruler
+ruler has_many events 
+events belongs_to ruler
+events belongs_to country
+country has_one neighbor:country
