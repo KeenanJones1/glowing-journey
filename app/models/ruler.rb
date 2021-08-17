@@ -42,7 +42,6 @@ end
   }
   
   self.personality = choosen_personality[0]
-  print choosen_personality[0]
  end
 
 end

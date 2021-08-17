@@ -77,3 +77,12 @@ type of Event Decks
 Certain Choices add Events to Event Deck. 
 
 
+
+culture of Countries 
+--scholar 
+--art 
+--warlike
+
+
+validate event, 
+regex -> +/- followed by digit followed by effect 
