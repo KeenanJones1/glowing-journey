@@ -1,4 +1,4 @@
- class Ruler
+ class Ruler < ApplicationRecord
   attr_accessor :age, :first_name, :dyansty_name, :personality, :skills
 
   @@personality_types = [
