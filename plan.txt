@@ -1,0 +1,62 @@
+main components
+-ruler 
+-country 
+-event
+
+
+ruler
+-personality 
+-age
+-skills 
+-first name 
+-dyansty name
+
+
+country
+-name
+-tax income 
+-number of provinces 
+-trade income 
+-gross income
+-army size 
+-army composition
+-production
+-country-happiness
+
+
+events 
+-type
+-effect
+-descripition
+
+
+User creates and names their ruler
+Select a intro event
+User can increase tax, increase army size and declare war
+increase tax lowers happiness 
+increase army size lowers gross income
+declare war can either increase number of provinces or lower number of provinces dependant on enemy army size. 
+
+events can give details on neighbor
+events can increase or decrease all country attrs
+events can kill ruler, increase ruler skills or change ruler personality
+
+
+country events 
+-rebels 
+--effected by unhappiness 
+--larger army size can put down rebels 
+--smaller army size can overthrow and kill the ruler, game over 
+
+-bankrupt
+--small army size 
+--unhappiness
+--production decrease
+--trade income decrease 
+
+-small army size 
+--neighbor attack and take provinces
+--rebels can overtake kingdom
+--provinces rebels
+
+
