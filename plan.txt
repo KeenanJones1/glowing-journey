@@ -96,3 +96,26 @@ ruler has_many events
 events belongs_to ruler
 events belongs_to country
 country has_one neighbor:country
+
+
+Overview:
+Choose you're own adventure
+You are the ruler of a young tribe
+Name and choose the type of culture you want your people to follow. 
+
+After choosing a culture, make you're first choice as tribal chief. 
+
+Each choice contributes to your peoples' happiness, army strength, and income. 
+
+Certain choices trigger events including: war with neighbor, rebels spawn, bankruptcy, disease, loss income. 
+
+event-effects = Country + Event
+ruler-country = Ruler + Country
+ruler-decision = Ruler + Event
+
+Event triggers -> ruler decision -> 
+ruler_decision created 
+
+different types of events have different types of enum effects
+
+how to represent neighbor

@@ -2,10 +2,12 @@
 
 one:
   first_name: MyString
-  dyansty_name: MyString
+  dynasty_name: MyString
   age: 1
+  personality: MyString
 
 two:
   first_name: MyString
-  dyansty_name: MyString
+  dynasty_name: MyString
   age: 1
+  personality: MyString

@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ruler: one
+  country: one
+  tax_income: 1.5
+  number_of_providences: 1
+  trade_income: 1.5
+  gross_income: 1.5
+  army_size: 
+  product: 1
+  country_happiness: 1
+
+two:
+  ruler: two
+  country: two
+  tax_income: 1.5
+  number_of_providences: 1
+  trade_income: 1.5
+  gross_income: 1.5
+  army_size: 
+  product: 1
+  country_happiness: 1

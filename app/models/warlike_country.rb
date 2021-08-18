@@ -1,7 +1,5 @@
-class Warlike < Country
+class WarlikeCountry < RulerCountry
  attr_accessor :name, :tax_income, :provinces_num, :trade_income, :gross_income, :army_size, :production, :country_happiness
-
-
 
 
  def initialize(name)
@@ -17,4 +15,5 @@ class Warlike < Country
   @tax_income = production / tax_rate
   @gross_income = (@tax_income + @trade_income) / army_size
  end
+
 end
