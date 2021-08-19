@@ -1,7 +1,7 @@
 class ScholarCountry < RulerCountry
  attr_accessor :name, :tax_income, :provinces_num, :trade_income, :gross_income, :army_size, :production, :country_happiness
 
- def initialize(name)
+ def initialize()
   @name = name 
   @provinces_num = 3
   @army_size = 4
