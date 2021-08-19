@@ -8,7 +8,7 @@ class CreateRulerCountries < ActiveRecord::Migration[6.0]
       t.float :trade_income
       t.float :gross_income
       t.integer :army_size
-      t.integer :product
+      t.integer :production
       t.integer :country_happiness
       t.string :type
 

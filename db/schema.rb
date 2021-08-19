@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_08_18_230059) do
     t.float "trade_income"
     t.float "gross_income"
     t.integer "army_size"
-    t.integer "product"
+    t.integer "production"
     t.integer "country_happiness"
     t.string "type"
     t.datetime "created_at", precision: 6, null: false

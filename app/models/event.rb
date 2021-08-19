@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
- enum effects: [:army, :tax, :production, :providence, :neighbor, :trade, :happiness]
+ enum effect: [:army, :tax, :production, :providence, :neighbor, :trade, :happiness]
  
 end
