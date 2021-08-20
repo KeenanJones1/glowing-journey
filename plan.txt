@@ -119,3 +119,6 @@ ruler_decision created
 different types of events have different types of enum effects
 
 how to represent neighbor
+
+when creating list grab one intro event 
+and one final event by type of event. 

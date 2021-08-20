@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+RulerChoice.destroy_all
 Event.destroy_all
 RulerCountry.destroy_all
 Country.destroy_all
@@ -38,3 +39,4 @@ ruler_one_choice = RulerChoice.create(ruler: ruler, event: event_one, choice: 0)
 ruler_country_three.generate()
 ruler_country_two.generate()
 ruler_country.generate()
+# inside of generate add method to generate stack of events. 

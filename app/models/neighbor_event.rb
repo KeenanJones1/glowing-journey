@@ -1,0 +1,4 @@
+class NeighborEvent < Event
+ 
+ 
+end
