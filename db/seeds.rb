@@ -18,7 +18,9 @@ country = Country.create(name: 'Keenanistan')
 ruler_country = WarlikeCountry.create(ruler: ruler, country: country)
 
 ruler_two = Ruler.create(first_name: 'Manuel', dynasty_name: 'Tish',age: 23, personality:'artistic')
+
 country_two = Country.create(name: 'Tish')
+
 ruler_country_two = ArtisticCountry.create(ruler: ruler_two, country: country_two)
 
 
@@ -36,7 +38,10 @@ ruler_one_choice = RulerChoice.create(ruler: ruler, event: event_one, choice: 0)
 
 
 
+
 ruler_country_three.generate()
 ruler_country_two.generate()
 ruler_country.generate()
+event_one.calc_choice(ruler_one_choice, ruler_country)
+# byebug
 # inside of generate add method to generate stack of events. 

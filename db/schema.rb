@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_18_230059) do
+ActiveRecord::Schema.define(version: 2021_08_20_231219) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2021_08_18_230059) do
     t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "tax_rate"
     t.index ["country_id"], name: "index_ruler_countries_on_country_id"
     t.index ["ruler_id"], name: "index_ruler_countries_on_ruler_id"
   end

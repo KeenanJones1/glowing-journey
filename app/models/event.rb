@@ -26,4 +26,32 @@ class Event < ApplicationRecord
 
 
 
+# [:improve_income, :improve_army, :neighbor, :improve_happiness]
+
+ def calc_choice(ruler_choice, ruler_country)
+  number_of_providences = ruler_country.number_of_providences
+
+  army_size = ruler_country.army_size
+  
+  country_happiness = ruler_country.country_happiness
+  
+  trade_income = ruler_country.trade_income 
+  
+  tax_rate = ruler_country.tax_rate
+
+  byebug
+  case ruler_choice
+  when "improve_income"
+
+  when "improve_army"
+
+  when "neighbor"
+   
+  else
+   
+  end
+  # using choice to increase or decrease ruler_country attrs
+  
+ # if event.type == major use another method to 
+ end
 end
