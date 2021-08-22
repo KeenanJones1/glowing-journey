@@ -48,7 +48,7 @@ ruler_country_two.generate()
 ruler_country.generate()
 ruler_country.calc_choice(ruler_one_choice, event_one)
 
-# ruler_country.calc_choice(ruler_two_choice, event_one)
+ruler_country.calc_choice(ruler_two_choice, event_one)
 
 # ruler_country.calc_choice(ruler_three_choice, event_one)
 # byebug

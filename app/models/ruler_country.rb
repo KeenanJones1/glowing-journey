@@ -47,34 +47,30 @@ class RulerCountry < ApplicationRecord
 
   def calc_choice(ruler_choice, event)
     number_of_providences = self.number_of_providences
-    
     army_size = self.army_size
-    
     country_happiness = self.country_happiness
-    
     trade_income = self.trade_income 
-    
     tax_rate = self.tax_rate
-   
-    
-    
-    
-   
-    
+
+    self.statDecrease(event, ruler_choice)
+    self.statIncrease(event, ruler_choice)
+  end
+
+  def statDecrease(event, ruler_choice)
     # updating stat that will decrease
     statDescrease = (self[@@oppositeEffects[event.effect]] * @@choicePercentages[ruler_choice.choice])
-    
+
     statOriginal = self[@@oppositeEffects[event.effect]]
     
     statAfterDecrease = statOriginal - statDescrease
 
-
     self.update(@@oppositeEffects[event.effect] => statAfterDecrease) 
-    
 #  end of updating stat decrease
+  end
 
 
-# beginning of updating stat increase
+  def statIncrease(event, ruler_choice)
+    # beginning of updating stat increase
     baseStat = @@eventEffects[event.effect]
     statOgVal = self[@@eventEffects[event.effect]]
     statIncrease = (self[@@eventEffects[event.effect]] * @@choicePercentages[ruler_choice.choice])
@@ -87,8 +83,6 @@ class RulerCountry < ApplicationRecord
 
     self.update(baseStat => statAfterIncrease) 
 # end of updating stat increase
-    
-
-
   end
+
 end
