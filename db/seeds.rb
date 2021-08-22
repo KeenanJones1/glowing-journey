@@ -36,12 +36,20 @@ event_one = Event.create(effect:1, description: "Shiny metal found in a nearby c
 
 ruler_one_choice = RulerChoice.create(ruler: ruler, event: event_one, choice: 0)
 
+ruler_two_choice = RulerChoice.create(ruler: ruler, event: event_one, choice: 1)
+
+ruler_three_choice = RulerChoice.create(ruler: ruler, event: event_one, choice: 2)
+
 
 
 
 ruler_country_three.generate()
 ruler_country_two.generate()
 ruler_country.generate()
-event_one.calc_choice(ruler_one_choice, ruler_country)
+ruler_country.calc_choice(ruler_one_choice, event_one)
+
+# ruler_country.calc_choice(ruler_two_choice, event_one)
+
+# ruler_country.calc_choice(ruler_three_choice, event_one)
 # byebug
 # inside of generate add method to generate stack of events. 

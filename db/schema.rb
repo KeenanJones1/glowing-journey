@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_08_20_231219) do
     t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "tax_rate"
+    t.float "tax_rate"
     t.index ["country_id"], name: "index_ruler_countries_on_country_id"
     t.index ["ruler_id"], name: "index_ruler_countries_on_ruler_id"
   end
