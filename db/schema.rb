@@ -47,10 +47,12 @@ ActiveRecord::Schema.define(version: 2021_08_20_231219) do
     t.integer "production"
     t.integer "country_happiness"
     t.string "type"
+    t.integer "neighbor_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.float "tax_rate"
     t.index ["country_id"], name: "index_ruler_countries_on_country_id"
+    t.index ["neighbor_id"], name: "index_ruler_countries_on_neighbor_id"
     t.index ["ruler_id"], name: "index_ruler_countries_on_ruler_id"
   end
 
@@ -66,5 +68,6 @@ ActiveRecord::Schema.define(version: 2021_08_20_231219) do
   add_foreign_key "ruler_choices", "events"
   add_foreign_key "ruler_choices", "rulers"
   add_foreign_key "ruler_countries", "countries"
+  add_foreign_key "ruler_countries", "ruler_countries", column: "neighbor_id"
   add_foreign_key "ruler_countries", "rulers"
 end

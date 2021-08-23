@@ -11,7 +11,7 @@ class CreateRulerCountries < ActiveRecord::Migration[6.0]
       t.integer :production
       t.integer :country_happiness
       t.string :type
-
+      t.references :neighbor, foreign_key: { to_table: :ruler_countries }
       t.timestamps
     end
   end

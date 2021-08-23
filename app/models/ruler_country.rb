@@ -1,6 +1,13 @@
+require 'faker'
+
 class RulerCountry < ApplicationRecord
   belongs_to :ruler
   belongs_to :country
+  has_one :neighbor, class_name: "RulerCountry",
+  foreign_key: "neighbor_id", dependent: :destroy
+
+  @@types = ["WarlikeCountry", "ScholarCountry", "ArtisticCountry"]
+
   @@eventEffects = {
     "tax" => "tax_rate",
     "army" => "army_size",
@@ -85,4 +92,19 @@ class RulerCountry < ApplicationRecord
 # end of updating stat increase
   end
 
+
+  def generate_neighbor()
+    neighbor_ruler = Ruler.create(first_name: Faker::Name.first_name , dynasty_name: Faker::Name.last_name , age: Faker::Number.within(range: 15..80), personality: 'artist')
+
+    
+    country = Country.create(name: 'Pattersonville')
+
+    neighbor_country = RulerCountry.create(type: @@types[rand(0..2)], ruler: neighbor_ruler, country: country)
+# improve neighbor generation
+    byebug
+
+    self.update(neighbor: neighbor_country)
+
+  end
+  
 end

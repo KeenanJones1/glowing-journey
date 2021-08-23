@@ -50,6 +50,6 @@ ruler_country.calc_choice(ruler_one_choice, event_one)
 
 ruler_country.calc_choice(ruler_two_choice, event_one)
 
-# ruler_country.calc_choice(ruler_three_choice, event_one)
-# byebug
+ruler_country.calc_choice(ruler_three_choice, event_one)
+byebug
 # inside of generate add method to generate stack of events. 
