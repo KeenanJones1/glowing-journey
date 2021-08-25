@@ -32,7 +32,20 @@ country_three = Country.create(name: 'Wells')
 
 ruler_country_three = ScholarCountry.create(ruler: ruler_three, country: country_three)
 
-event_one = Event.create(effect:1, description: "Shiny metal found in a nearby cave should we explore it?")
+event_one = BaseEvent.create(effect:1, description: "Shiny metal found in a nearby cave should we explore it?")
+
+event_two = NeighborEvent.create(effect:4, description: "A few slightly shady looking characters have appeared at our court, offering their service. They claim to be willing and able to do things that any proper ruler would never deign to do - publicly.")
+
+event_three = MajorEvent.create(effect:6, description: "With traitor armies raising their flags in rebellion across our empire, rebels think they can smell blood in the water and have joined the other malcontents in revolt.")
+
+# improve this
+event_four = FinalEvent.create(effect:6, description: "There is widespread support among the people and the nobility for our current policies. Indeed, they are being magnified well beyond their actual efficiency as proof of the government's goodwill and interest in the welfare of the realm.")
+
+event_five = MajorEvent.create(effect:6, description: "High taxes, and cultural and religious differences have caused unhappiness among our citizens. If this continues it will drastically affect the stability of our nation.")
+
+# event_four = NeighborEvent.create(effect:4, description: "A few slightly shady looking characters have appeared at our court, offering their service. They claim to be willing and able to do things that any proper ruler would never deign to do - publicly.")
+
+
 
 ruler_one_choice = RulerChoice.create(ruler: ruler, event: event_one, choice: 0)
 
@@ -50,6 +63,5 @@ ruler_country.calc_choice(ruler_one_choice, event_one)
 
 ruler_country.calc_choice(ruler_two_choice, event_one)
 
-ruler_country.calc_choice(ruler_three_choice, event_one)
-byebug
+# ruler_country.calc_choice(ruler_three_choice, event_one)
 # inside of generate add method to generate stack of events. 

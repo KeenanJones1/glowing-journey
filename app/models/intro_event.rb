@@ -5,7 +5,7 @@ class IntroEvent < Event
 
  # Effect country attrs
 
-  # intro events 
+# intro events 
 # after creating a ruler and country type 
 
 # spy on neighbor, increase army, increase taxes, increase production

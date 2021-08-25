@@ -6,7 +6,7 @@ class RulerCountry < ApplicationRecord
   has_one :neighbor, class_name: "RulerCountry",
   foreign_key: "neighbor_id", dependent: :destroy
 
-  @@types = ["WarlikeCountry", "ScholarCountry", "ArtisticCountry"]
+  @@personalities = ["Artist", "General", "Scholar"]
 
   @@eventEffects = {
     "tax" => "tax_rate",
@@ -45,12 +45,9 @@ class RulerCountry < ApplicationRecord
 
     gross_income = (tax_income + trade_income) / army_size
 
-    self.update(production: production, tax_income:tax_income, gross_income:gross_income)
+    self.update(production: production.round(1), tax_income:tax_income.round(1), gross_income:gross_income.round(1))
   end
 
-#To-do
-#separate into two funcitons one for decreasing stat and one for increasing stat
-# if event.type == major use another method to 
 
   def calc_choice(ruler_choice, event)
     number_of_providences = self.number_of_providences
@@ -94,17 +91,22 @@ class RulerCountry < ApplicationRecord
 
 
   def generate_neighbor()
-    neighbor_ruler = Ruler.create(first_name: Faker::Name.first_name , dynasty_name: Faker::Name.last_name , age: Faker::Number.within(range: 15..80), personality: 'artist')
+    neighbor_ruler = Ruler.create(first_name: Faker::Name.first_name , dynasty_name: Faker::Name.last_name , age: Faker::Number.within(range: 15..80), personality: @@personalities[Random.new.rand(0..2)])
 
     
     country = Country.create(name: 'Pattersonville')
 
-    neighbor_country = RulerCountry.create(type: @@types[rand(0..2)], ruler: neighbor_ruler, country: country)
-# improve neighbor generation
-    byebug
+    number_of_providences = Random.new.rand(0..6)
+    army_size = Random.new.rand(0..6)
+    country_happiness = Random.new.rand(0..6)
+    trade_income = Random.new.rand(0..6)
+    tax_rate = Random.new.rand(0.0...1.1)
 
+
+    neighbor_country = RulerCountry.create(ruler: neighbor_ruler, country: country, number_of_providences: number_of_providences,army_size:army_size, country_happiness:country_happiness,trade_income:trade_income, tax_rate:tax_rate)
+
+    neighbor_country.country_calc(country_happiness, army_size, trade_income, tax_rate, number_of_providences)
     self.update(neighbor: neighbor_country)
-
   end
   
 end
